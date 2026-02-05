@@ -1,3 +1,6 @@
+![Texto alternativo](https://media.licdn.com/dms/image/v2/D4D16AQFmJVLu1EtoqQ/profile-displaybackgroundimage-shrink_350_1400/B4DZnFkMIrJEAY-/0/1759956225959?e=1772064000&v=beta&t=uL5U1GYS7oyNtuh-4mzdao9kvOC4InkWM9DE4Omlq2M)
+
+
 #  About Me:
 I’m a curious and persistent person with a strong desire to learn. I enjoy understanding how things work behind the scenes and turning ideas into real, working solutions. I like building projects where I can improve, make mistakes, and iterate until things feel right.
 
@@ -14,5 +17,5 @@ This profile is a place to showcase what I’m building along the way
 #  GitHub Stats:
 ![](https://nirzak-streak-stats.vercel.app/?user=CEOAlmaloco&theme=github_dark&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=CEOAlmaloco&theme=github_dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact)
-  
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
