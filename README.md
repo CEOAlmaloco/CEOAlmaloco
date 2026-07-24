@@ -1,4 +1,6 @@
-![Banner](https://media.licdn.com/dms/image/v2/D4D16AQFmJVLu1EtoqQ/profile-displaybackgroundimage-shrink_350_1400/B4DZnFkMIrJEAY-/0/1759956225959?e=1772064000&v=beta&t=uL5U1GYS7oyNtuh-4mzdao9kvOC4InkWM9DE4Omlq2M)
+<p align="center">
+  <img src="./banner.svg" alt="Alex Ampuero" width="100%" />
+</p>
 
 <div align="center">
 
@@ -75,11 +77,11 @@ This profile is a place to showcase what I’m building along the way.
 ### GitHub Stats
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=CEOAlmaloco&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" alt="GitHub Stats" />
-  <img height="180" src="https://nirzak-streak-stats.vercel.app/?user=CEOAlmaloco&theme=github_dark&hide_border=true" alt="GitHub Streak" />
+  <img height="180" src="https://gh-stats.work/api?username=CEOAlmaloco&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" alt="GitHub Stats" />
+  <img height="180" src="https://streak-stats.demolab.com/?user=CEOAlmaloco&theme=github-dark-dimmed&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CEOAlmaloco&layout=donut&theme=github_dark&hide_border=true&langs_count=10&include_all_commits=true" alt="Top languages" height="220" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CEOAlmaloco&layout=compact&theme=github_dark&hide_border=true&langs_count=10&include_all_commits=true" alt="Top languages compact" height="220" />
+  <img src="https://gh-stats.work/api/top-langs/?username=CEOAlmaloco&layout=donut&theme=github_dark&hide_border=true&langs_count=10" alt="Top languages" height="220" />
+  <img src="https://gh-stats.work/api/top-langs/?username=CEOAlmaloco&layout=compact&theme=github_dark&hide_border=true&langs_count=10" alt="Top languages compact" height="220" />
 </p>
