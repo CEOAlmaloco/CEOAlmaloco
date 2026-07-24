@@ -1,0 +1,69 @@
+name: Update GitHub Profile
+
+# Actualiza heatmap + info-card + stats SVG (dark/light).
+# Secrets necesarios en el repo:
+#   USER_NAME     = CEOAlmaloco
+#   ACCESS_TOKEN  = Personal Access Token (ver permisos abajo)
+#
+# Token fine-grained recomendado:
+#   Account:  read:Followers, read:Starring, read:Watching
+#   Repos:    Contents (read), Metadata (read), Commit statuses (read)
+#   Acceso:   All repositories (o al menos los tuyos)
+
+on:
+  schedule:
+    - cron: "0 5 * * *"          # todos los días ~05:00 UTC
+  push:
+    branches: [main]
+  workflow_dispatch: {}          # botón "Run workflow" en Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r cache/requirements.txt
+          pip install -r scripts/requirements.txt
+
+      - name: Generate contribution heatmap + info card
+        run: |
+          python scripts/fetch_contributions.py || true
+          python scripts/generate_streak_svg.py CEOAlmaloco contrib-heatmap.svg
+          python scripts/make_info_card.py
+
+      - name: Update Andrew-style stats SVGs
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+        run: |
+          if [ -z "${ACCESS_TOKEN}" ] || [ -z "${USER_NAME}" ]; then
+            echo "::error::Faltan secrets ACCESS_TOKEN y/o USER_NAME"
+            echo "Ve a Settings → Secrets and variables → Actions y créalos."
+            exit 1
+          fi
+          python today.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh profile graphics [skip ci]"
+          file_pattern: >-
+            dark_mode.svg
+            light_mode.svg
+            contrib-heatmap.svg
+            info-card.svg
+            data/contributions.json
+            cache/*.txt
